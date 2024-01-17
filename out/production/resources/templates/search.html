@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script src="/js/search.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Kakao MAP API -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=acb87059247a43fd058b0673e861a850&libraries=services"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <img src="/images/weather.png">
+        <p>날씨 단기예보 검색</p>
+    </header>
+    <main>
+        <div class="ct_msg2">
+            <p> ※ 행정구역(시・도/시・군・구/읍・면・동)으로 입력해주세요</p>
+        </div>
+        <div class="ct_search">
+            <div class="search_bar">
+                <img src="/images/search.png">
+                <input class="searchText" type="text" id="searchText" placeholder="장소 입력 후 검색 버튼 클릭">
+            </div>
+            <div>
+                <a class="btnSearch" id="btnSearch">검색</a>
+            </div>
+        </div>
+        <div class="ly_content">
+            <div class="ct_map">
+                <div id="map" style="width:100%;height:100%;"></div>
+            </div>
+            <div class="ct_weather">
+                <div class="weather-kma">
+                    <img src="/images/logo_kma.png">
+                    <div>기상청</div>
+                    <div>제공</div>
+                </div>
+                <!-- 현재 기온 -->
+                <div class="weather-wrapper">
+                    <div class="weather-box">
+                        <div class="wb-t1h">
+                            <img id="wt1" src="/images/icon_flat_wt1.svg" style="display: none"> <!-- 맑음 -->
+                            <img id="wt5" src="/images/icon_flat_wt5.svg" style="display: none"> <!-- 구름많음 -->
+                            <img id="wt7" src="/images/icon_flat_wt7.svg" style="display: none"> <!-- 흐림 -->
+                            <img id="wt9" src="/images/icon_flat_wt9.svg" style="display: none"> <!-- 비 -->
+                            <img id="wt12" src="/images/icon_flat_wt12.svg" style="display: none"> <!-- 눈 -->
+                            <img id="wt14" src="/images/icon_flat_wt14.svg" style="display: none"> <!-- 눈비 -->
+
+                            <span class="t1h" id="t1h"></span>
+                            <span class="celsius">°</span>
+                            <span><i id="pty" class="pty-text"></i></span>
+                        </div>
+                    </div>
+                    <!-- 강수, 바람, 습도 -->
+                    <div class="weather-box">
+                        <div class="wb-inner-box">
+                            <div class="wb-inner-box-title">강수</div>
+                            <div class="wb-inner-box-value v1"><p id="rn1"></p></div>
+                        </div>
+                        <div class="wb-inner-box">
+                            <div class="wb-inner-box-title">습도</div>
+                            <div class="wb-inner-box-value v2"><p id="reh"></p>%</div>
+                        </div>
+                        <div class="wb-inner-box">
+                            <div class="wb-inner-box-title">바람</div>
+                            <div class="wb-inner-box-value v3">
+                                <p id="vec"></p>
+                                <p id="wsd" style="margin-left: 3px;"></p>m/s
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 안내 메시지 -->
+                    <div class="weather-msg">매시간 30분 마다 최신 정보로 업데이트</div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="ct_footer">
+            Copyright© circle All Rights RESERVED.
+        </div>
+    </footer>
+</div>
+</body>
+</html>

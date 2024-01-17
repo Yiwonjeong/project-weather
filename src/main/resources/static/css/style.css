@@ -1,0 +1,252 @@
+/* common css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato','Nanum Gothic',dotum,'돋움',arial,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000000;}
+input, textarea {outline: none;}
+
+/* wrapper */
+#wrapper {
+    width: 100vw;
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 80px;
+    color:#F9F7F7;
+    background: #112D4E;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0 23px;
+}
+header > img {
+    width: 48px;
+}
+header > p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* 메인 */
+main {
+    width: 100%;
+    height: calc(100vh - 130px);
+    margin-top: 80px;
+    margin-bottom: 50px;
+    background: #F9F7F7;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 50px;
+    background: #DBE2EF;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.ct_footer {
+    font-size: 15px;
+}
+
+/* Main Page */
+.ct_msg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ct_msg > p {
+    font-size: 50px;
+    font-weight: 600;
+}
+.ct_search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+.search_bar {
+    position: relative;
+}
+.search_bar > img {
+    position: absolute;
+    left: 20px;
+    top: 21px;
+    width: 30px;
+}
+.search_bar > .searchText {
+    width: 700px;
+    height: 70px;
+    font-size: 30px;
+    padding-left: 72px;
+    padding-right: 30px;
+    border: 1px solid #D2DFE5;
+    border-radius: 5px;
+}
+.btnSearch {
+    display: block;
+    width: 100px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 68px;
+    text-align: center;
+    background: #3F72AF;
+    color:#F9F7F7;
+    border: 1px solid #3F72AF;
+    border-radius: 4px;
+}
+.btnSearch:hover {
+    cursor: pointer;
+}
+.ct_msg2 {
+    width: 100%;
+    text-align: center;
+}
+.ct_msg2 > p {
+    font-size: 23px;
+    color: #3F72AF;
+    font-weight: 600;
+}
+
+/* Search Page */
+.ly_content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.ct_map {
+    width: 48%;
+    height: 600px;
+    background: #fff;
+    border: 1px solid #D2DFE5;
+}
+.ct_weather {
+    width: 48%;
+    height: 600px;
+    background: #fff;
+    border: 1px solid #D2DFE5;
+    padding: 10px;
+}
+.weather-kma {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.weather-kma > div:nth-of-type(1) {
+    font-size: 18px;
+    color: #222;
+    font-weight: 800;
+}
+.weather-kma > div:nth-of-type(2) {
+    font-size: 14px;
+    color: #77777a;
+    font-weight: 500;
+}
+.weather-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+}
+.weather-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.wb-t1h {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.wb-t1h img {width: 65px;}
+.wb-t1h span {
+    font-size: 60px;
+    font-weight: 900;
+    color: #202020;
+}
+.wb-inner-box {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    gap: 8px;
+}
+.wb-inner-box:nth-of-type(1) {
+    background-color: #ebf7ff;
+    border: 1px solid #d8e9f5;
+}
+.wb-inner-box:nth-of-type(2) {
+    background-color: #fdfbef;
+    border: 1px solid #f6f2dd;
+}
+.wb-inner-box:nth-of-type(3) {
+    background-color: #ebfae8;
+    border: 1px solid #d6efd0;
+}
+.wb-inner-box-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #444447;
+}
+.wb-inner-box-value {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 600;
+}
+.wb-inner-box-value p {
+    font-size: 20px;
+    font-weight: 600;
+}
+.wb-inner-box-value.v1 {color: #34a0ff;}
+.wb-inner-box-value.v2 {color: #fda60e;}
+.wb-inner-box-value.v3 {color: #00c73c;}
+.weather-msg {
+    color: #3F72AF;
+    font-weight: 600;
+}
+.pty-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <img src="/images/weather.png">
+        <p>날씨 단기예보 검색</p>
+    </header>
+    <main>
+        <div class="ct_msg">
+            <p>장소를 검색하세요</p>
+        </div>
+        <div class="ct_search">
+            <div class="search_bar">
+                <img src="/images/search.png">
+                <input class="searchText" type="text" id="searchText" placeholder="장소 입력 후 검색 버튼 클릭">
+            </div>
+            <div>
+                <a class="btnSearch" id="btnSearch">검색</a>
+            </div>
+        </div>
+        <div class="ct_msg2">
+            <p> ※ 행정구역(시・도/시・군・구/읍・면・동)으로 입력해주세요</p>
+        </div>
+    </main>
+    <footer>
+        <div class="ct_footer">
+            Copyright© circle All Rights RESERVED.
+        </div>
+    </footer>
+</div>
+</body>
+</html>
